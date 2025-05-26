@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>❤️ Counting Down To Us ❤️</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Password Overlay -->
+  <div id="pw-overlay">
+    <div id="pw-box">
+      <h2>Welcome 💜</h2>
+      <p>Enter the secret word:</p>
+      <input id="pw-input" type="password" autocomplete="off" />
+      <button onclick="authorize()">Enter</button>
+      <p id="pw-error"></p>
+    </div>
+  </div>
+
+  <div class="background-animation"></div>
+
+  <header class="header">
+    <h1>❤️ Next Big Milestone In… ❤️</h1>
+  </header>
+
+  <nav class="nav-bar">
+    <a href="index.htm" class="nav-link">Home</a>
+    <a href="gallery.htm" class="nav-link">Gallery</a>
+  </nav>
+
+  <section class="timer-container">
+    <h2 class="timer-title">💕 Time left until 19 August 2025 💕</h2>
+    <div class="main-timer" id="main-timer"></div>
+    <div class="secondary-timers">
+      <p><strong>Days:</strong> <span id="days"></span></p>
+      <p><strong>Hours:</strong> <span id="hours"></span></p>
+      <p><strong>Minutes:</strong> <span id="minutes"></span></p>
+      <p><strong>Seconds:</strong> <span id="seconds"></span></p>
+    </div>
+  </section>
+
+  <audio id="bg-music" loop>
+    <source src="bg-music.mp3" type="audio/mpeg">
+  </audio>
+  <button id="music-toggle" onclick="toggleMusic()">🎵 Play Music</button>
+
+  <script src="auth.js"></script>
+  <script src="countdown-timer.js"></script>
+  <script>
+    function toggleMusic () {
+      const m=document.getElementById('bg-music');
+      m.paused?(m.play(),this.innerText='🎵 Stop Music'):(m.pause(),this.innerText='🎵 Play Music');
+    }
+  </script>
+</body>
+</html>
