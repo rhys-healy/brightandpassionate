@@ -10,7 +10,7 @@
   <div id="pw-overlay">
     <div id="pw-box">
       <h2>Welcome</h2>
-      <p>Enter the secret word:</p>
+      <p>Enter the playlist <em>(hint: yourgf)</em>:</p>
       <input id="pw-input" type="password" autocomplete="off" />
       <button onclick="authorize()">Enter</button>
       <p id="pw-error"></p>
@@ -18,6 +18,8 @@
   </div>
 
   <div class="background-animation"></div>
+  <div class="hero-img"><img src="images/hero.jpg" alt="Us at the beach" class="hero-photo"></div>
+
 
   <header class="header">
     <h1>The Reunion</h1>
@@ -25,7 +27,7 @@
 
   <nav class="nav-bar">
     <a href="index.htm" class="nav-link">Home</a>
-    <a href="gallery.htm" class="nav-link">Gallery</a>
+    <a href="gallery.htm" class="nav-link">Gallery</a>    <a href="music.htm" class="nav-link">Music</a>
   </nav>
 
   <section class="timer-container">
@@ -40,19 +42,25 @@
     <p id="moon-phase" style="margin-top:20px;font-size:18px;"></p>
   </section>
 
-  <audio id="bg-music" loop>
-    <source src="bg-music.mp3" type="audio/mpeg">
-  </audio>
-  <button id="music-toggle" onclick="toggleMusic()">Play Music</button>
+  <section class="now-playing">
+    <h2>Now Playing</h2>
+    <div class="np-user" id="np-rhys">
+      <h3>Rhys</h3>
+      <img id="np-img-rhys" src="placeholder.png" alt="Rhys now playing cover">
+      <p id="np-track-rhys">–</p>
+    </div>
+    <div class="np-user" id="np-nz">
+      <h3>Her</h3>
+      <img id="np-img-nz" src="placeholder.png" alt="Her now playing cover">
+      <p id="np-track-nz">–</p>
+    </div>
+  </section>
 
   <script src="auth.js"></script>
   <script src="countdown-timer.js"></script>
   <script src="moon-phase.js"></script>
+  <script src="now-playing.js"></script>
   <script>
-    function toggleMusic () {
-      const m=document.getElementById('bg-music');
-      m.paused?(m.play(),this.innerText='Stop Music'):(m.pause(),this.innerText='Play Music');
-    }
-  </script>
+    </script>
 </body>
 </html>
