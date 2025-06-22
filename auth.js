@@ -1,5 +1,5 @@
 // auth.js – password gate with blur removal
-const SECRET = "frenchtoast";
+const SECRET = "me";
 
 function authorize(){
   const val = document.getElementById("pw-input").value.trim();
